@@ -1,0 +1,63 @@
+
+@import "reset.scss";
+$cgreen: #1ab26b;
+
+
+#OUTERWRAPPER{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 22px;
+    font-family: arial, sans-serif;
+    color: #000000;
+
+    #HEADER{
+      height: 90px;
+      #logo { width: 200px; display: inline-block; margin-top: 14px; margin-left: 14px;}
+      #MENU{
+        display: inline-block;
+        position: absolute; right: 50px; top: 38px;
+        a { display: inline-block; text-align:right; margin-left: 40px; text-decoration: none; color: #000000; font-weight: normal;}
+      }
+    }
+    #HERO{
+      width: 100%;
+      height: 800px;
+      background-image: url('../images/landing.jpg');
+      background-position: center center;
+      background-size: cover;
+      .claim-wrapper{
+        position: relative; top: 300px; color: #ffffff;
+        h1{ font-size: 64px; font-weight: bold; text-align: center; line-height: 104px; }
+        h2{ font-size: 28px; text-align: center; line-height: 52px; }
+      }
+    }
+    #SUBCLAIM{
+      width: 100%; text-align: center; margin-top: 40px;
+      h3{ width: 400px; font-size:38px; color: #000000; font-weight: bold; line-height: 68px; margin: 0 auto 0 auto; position: relative; margin-bottom: 120px;
+        &::after{ content: ""; color: $cgreen; width: 339px; height: 3px; background-color: $cgreen; position: absolute; top: 58px; left: 31px;}
+      }
+      .one-third{
+        width: 30%; display: inline-block; text-align: center; vertical-align: top; box-sizing: border-box; padding: 40px; position: relative;
+
+        &.songs::after  { content:""; background-image: url('../images/music-icon.png'); width: 100px; height: 100px; position: absolute; top: -60px; left: 160px; background-size: 100px 100px; background-position: center left; background-repeat: no-repeat; }
+        &.hdmusic::after{ content:""; background-image: url('../images/high-quality-icon.png'); width: 130px; height: 90px; position: absolute; top: -60px; left: 160px; background-size: 130px 90px; background-position: center left; background-repeat: no-repeat; }
+        &.stream::after { content:""; background-image: url('../images/devices-icon.png'); width: 100px; height: 100px; position: absolute; top: -60px; left: 160px; background-size: 100px 100px; background-position: center left;background-repeat: no-repeat;  }
+        & p             { font-size: 26px; line-height: 32px; font-weight: normal;  }
+        h4              { font-size: 28px; color: $cgreen; line-height: 44px; }
+      }
+    }
+    #APPWRAPPER{
+      width: 90%; margin: 5%; padding: 8%; box-sizing: border-box;
+      background-color: $cgreen; color: #ffffff;
+      h5{ font-size: 36px; line-height: 64px; position: relative;}
+      h5::after{ content: ""; width: 454px; height: 3px; background-color: #ffffff; position: absolute; top: 58px; left: 3px;}
+      h6{ font-size: 27px; line-height: 80px; margin-top: 40px; font-weight:bold; margin-right: 110px;}
+      p { line-height: 32px; font-weight: normal; font-size: 22px; margin-right: 110px;}
+      #contentwrapper { display: inline-block; box-sizing: border-box; width: 45%; vertical-align: top; }
+      #appimagewrapper{ display: inline-block; box-sizing: border-box; width: 42%; vertical-align: top; text-align: right; padding-right: 0;
+        & img{position:relative; top: 50px;}
+      }
+      #iconwrapper{ display: inline-block; box-sizing: border-box; width: 13%; height: 100%; text-align:right; position: relative; top: 280px; left: 10px; /*background-image: url("../images/spotify-icon-white.png"); background-repeat: no-repeat; background-size: 10% 10%; background-position: center center;*/  }
+    }
+  }
